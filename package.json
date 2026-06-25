@@ -7,5 +7,7 @@
     "start": "python3 -m http.server 4173 --bind 0.0.0.0",
     "build": "rm -rf dist && mkdir dist && cp index.html 404.html styles.css app.js dist/",
     "preview:daemon": "sh scripts/start-preview.sh"
+    "start": "python3 -m http.server 4173",
+    "build": "rm -rf dist && mkdir dist && cp index.html styles.css app.js dist/"
   }
 }
