@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1f6fa8" />
+    <title>Silver Strong</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-label="Silver Strong fitness app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Silver Strong</p>
+          <h1>Safe movement for adults 55+</h1>
+          <p class="hero-copy">Seated and low impact workouts with simple guidance, large controls, and progress you can feel proud of.</p>
+        </div>
+        <button class="emergency-button" type="button" aria-label="Call emergency contact">Emergency Contact</button>
+      </header>
+
+      <section class="daily-card" aria-labelledby="daily-title">
+        <div class="section-heading">
+          <p class="eyebrow">Today</p>
+          <h2 id="daily-title">Daily Seated Workout</h2>
+        </div>
+        <div class="workout-summary">
+          <div>
+            <strong>12 minutes</strong>
+            <span>Chair mobility + gentle strength</span>
+          </div>
+          <div>
+            <strong>Beginner</strong>
+            <span>No equipment beyond a sturdy chair</span>
+          </div>
+        </div>
+        <div class="safety-reminder" role="note" aria-label="Safety reminder">
+          <h3>Before you begin</h3>
+          <ul>
+            <li>Use a sturdy chair on a flat surface.</li>
+            <li>Keep water nearby and move slowly.</li>
+            <li>Stop immediately if you feel pain, dizziness, or shortness of breath.</li>
+          </ul>
+        </div>
+        <button id="startWorkout" class="primary-action" type="button">Start Safe Workout</button>
+      </section>
+
+      <section aria-labelledby="library-title">
+        <div class="section-heading">
+          <p class="eyebrow">Exercise Library</p>
+          <h2 id="library-title">Video Placeholders</h2>
+        </div>
+        <div class="library-grid" id="libraryGrid"></div>
+      </section>
+
+      <section class="progress-card" aria-labelledby="progress-title">
+        <div class="section-heading">
+          <p class="eyebrow">Progress</p>
+          <h2 id="progress-title">Your Weekly Tracker</h2>
+        </div>
+        <div class="progress-stats">
+          <article>
+            <strong id="completedCount">0</strong>
+            <span>Workouts completed</span>
+          </article>
+          <article>
+            <strong id="activeMinutes">0</strong>
+            <span>Active minutes</span>
+          </article>
+          <article>
+            <strong id="streakCount">0</strong>
+            <span>Day streak</span>
+          </article>
+        </div>
+        <button id="logWorkout" class="secondary-action" type="button">Mark Today's Workout Complete</button>
+        <p class="encouragement" id="encouragement">Every safe movement counts. Start when you are ready.</p>
+      </section>
+    </main>
+
+    <div class="modal" id="safetyModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+      <div class="modal-content">
+        <h2 id="modalTitle">Safety Check</h2>
+        <p>Please confirm you are seated in a sturdy chair, have space to move your arms, and feel well enough to exercise today.</p>
+        <div class="modal-actions">
+          <button class="secondary-action" id="cancelWorkout" type="button">Not Now</button>
+          <button class="primary-action" id="confirmWorkout" type="button">I’m Ready</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
